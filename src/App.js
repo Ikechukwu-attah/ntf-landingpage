@@ -10,6 +10,12 @@ const App = () => {
         mockupImg={assets.homeHero}
         banner="banner"
       />
+      <SectionWrapper
+        title="Smart User Interface Marketplace"
+        description=" First mobile app development"
+        mockupImg={assets.homeCards}
+        reverse
+      />
       <Feature />
       <DownLoad />
     </>

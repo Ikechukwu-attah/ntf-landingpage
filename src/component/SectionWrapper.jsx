@@ -2,10 +2,19 @@ import React from "react";
 import styles from "../styles/Global";
 import assets from "../assets";
 import Button from "../component/Button";
-const SectionWrapper = ({ title, description, showBtn, mockupImg, banner }) => {
+const SectionWrapper = ({
+  title,
+  description,
+  showBtn,
+  mockupImg,
+  banner,
+  reverse,
+}) => {
   return (
     <div
-      className={`min-h-screen ${styles.section} ${styles.bgWhite} ${banner}`}
+      className={`min-h-screen ${styles.section} ${
+        reverse ? styles.bgWhite : styles.bgPrimary
+      } ${banner}`}
     >
       <div
         className={`flex items-center w-11/12 sm:w-full minmd:w-3/4 ${styles.boxClass}`}
