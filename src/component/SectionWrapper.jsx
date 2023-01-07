@@ -21,9 +21,25 @@ const SectionWrapper = ({
           reverse ? styles.boxReverseClass : styles.boxClass
         }`}
       >
-        <div className={`${styles.descDiv}`}>
-          <h1 className={`${styles.h1Text}`}>{title}</h1>
-          <p className={`${styles.descriptionText}`}>{description}</p>
+        <div
+          className={`${styles.descDiv} ${
+            reverse ? "fadeRightMini" : "fadeLeftMini"
+          } ${reverse ? styles.textRight : styles.textLeft}`}
+        >
+          <h1
+            className={`${styles.h1Text} ${
+              reverse ? styles.blackText : styles.whiteText
+            }`}
+          >
+            {title}
+          </h1>
+          <p
+            className={`${styles.descriptionText} ${
+              reverse ? styles.blackText : styles.whiteText
+            }`}
+          >
+            {description}
+          </p>
           {showBtn && (
             <Button
               assetUrl={assets.expo}
@@ -35,7 +51,9 @@ const SectionWrapper = ({
           <img
             src={mockupImg}
             alt="mockup"
-            className={`${styles.sectionImg}`}
+            className={`${styles.sectionImg} ${
+              reverse ? "fadeLeftMini" : "fadeRightMini"
+            }`}
           />
         </div>
       </div>
