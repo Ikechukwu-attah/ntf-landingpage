@@ -17,7 +17,9 @@ const SectionWrapper = ({
       } ${banner}`}
     >
       <div
-        className={`flex items-center w-11/12 sm:w-full minmd:w-3/4 ${styles.boxClass}`}
+        className={`flex items-center w-11/12 sm:w-full minmd:w-3/4 ${
+          reverse ? styles.boxReverseClass : styles.boxClass
+        }`}
       >
         <div className={`${styles.descDiv}`}>
           <h1 className={`${styles.h1Text}`}>{title}</h1>
